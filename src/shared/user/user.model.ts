@@ -1,4 +1,4 @@
-import { ENUM_USER_ROLE } from '../../libs/enums/user.role';
+import { ENUM_USER_ROLE } from '../../libs/shared/user.role.interface';
 
 export type IUser = {
   name: string;

@@ -1,7 +1,7 @@
 import { RequestHandler } from 'express';
 import httpStatus from 'http-status';
-import catchAsync from '../../libs/shared/catchAsync';
-import sendResponse from '../../libs/shared/sendResponse';
+import catchAsync from '../../libs/core/catchAsync';
+import sendResponse from '../../libs/core/sendResponse';
 import { Service } from './auth.service';
 
 const signup: RequestHandler = catchAsync(async(req, res) => {

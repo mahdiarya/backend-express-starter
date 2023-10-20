@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: { { include "starter-cluster.fullname" . } }
+  labels: { { - include "starter-cluster.labels" . | nindent 4 } }
+spec:starter
+  type: { { .Values.service.type } }
+  ports:
+    - port: { { .Values.service.port } }
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector: { { - include "starter-cluster.selectorLabels" . | nindent 4 } }
+starterstarter

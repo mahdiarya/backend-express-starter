@@ -1,6 +1,6 @@
+import { ENUM_USER_ROLE } from '@/libs/shared/user.role.interface';
 import { Schema, model } from 'mongoose';
 import { IUser } from './user.model';
-import { ENUM_USER_ROLE } from '@/libs/enums/user.role';
 
 const userSchema = new Schema<IUser>(
   {

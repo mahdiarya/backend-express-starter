@@ -8,8 +8,8 @@ import handleValidationError from '../errors/validation.error';
 
 import { ZodError } from 'zod';
 import handleCastError from '../errors/cast.error';
+import { IGenericErrorMessage } from '../errors/error.interface';
 import handleZodError from '../errors/zod.error';
-import { IGenericErrorMessage } from '../interfaces/error';
 // import { errorlogger } from '../../shared/logger';
 
 const globalErrorHandler: ErrorRequestHandler = (
