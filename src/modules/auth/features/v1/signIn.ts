@@ -1,11 +1,11 @@
-import httpStatus from 'http-status';
+import * as httpStatus from 'http-status';
 import { Secret } from 'jsonwebtoken';
-import { ILogin } from '@/auth/domain/v1/dto';
-import config from '@/configs/app.config';
-import { User } from '@/shared/user/user.entity';
-import ApiError from '@/libs/errors/api.error';
-import { AuthUtils } from '@/libs/helpers/hash.helper';
-import { jwtHelpers } from '@/libs/helpers/jwt.helper';
+import config from '../../../../configs/app.config';
+import ApiError from '../../../../libs/errors/api.error';
+import { AuthUtils } from '../../../../libs/helpers/hash.helper';
+import { jwtHelpers } from '../../../../libs/helpers/jwt.helper';
+import { ILogin } from '../../../../modules/auth/domain/v1/dto';
+import { User } from '../../../../shared/user/user.entity';
 
 
 const signIn = async (payload: ILogin) => {

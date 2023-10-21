@@ -1,5 +1,5 @@
 import { RequestHandler } from 'express';
-import httpStatus from 'http-status';
+import * as httpStatus from 'http-status';
 import catchAsync from '../../libs/core/catchAsync';
 import sendResponse from '../../libs/core/sendResponse';
 import { Service } from './auth.service';
@@ -28,4 +28,4 @@ const login: RequestHandler = catchAsync(async(req, res) => {
   });
 });
 
-export const Controller = { signup, login };
+export { login, signup };

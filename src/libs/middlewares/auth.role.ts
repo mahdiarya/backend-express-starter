@@ -1,9 +1,17 @@
 import { NextFunction, Request, Response } from 'express';
 import httpStatus from 'http-status';
-import { Secret } from 'jsonwebtoken';
-import config from '@/configs/app.config';
-import ApiError from '@/libs/errors/api.error';
-import { jwtHelpers } from '@/libs/helpers/jwt.helper';
+import { JwtPayload, Secret } from 'jsonwebtoken';
+import config from '../../configs/app.config';
+import ApiError from '../../libs/errors/api.error';
+import { jwtHelpers } from '../../libs/helpers/jwt.helper';
+
+declare global {
+  namespace Express {
+    interface Request {
+      user?: JwtPayload
+    }
+  }
+}
 
 const auth =
   (...requiredRoles: string[]) =>

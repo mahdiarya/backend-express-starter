@@ -1,6 +1,6 @@
 import supertest from 'supertest';
 
-import app from '@/app.use';
+import app from '../src/app.use';
 
 describe('Express app', () => {
   describe('Routing', () => {

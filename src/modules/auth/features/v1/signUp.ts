@@ -1,11 +1,11 @@
-import httpStatus from 'http-status';
-import config from '../../../../configs/app.config';
+import * as httpStatus from 'http-status';
 import { Secret } from 'jsonwebtoken';
-import { IUser } from '../../../../shared/user/user.model';
-import { User } from '../../../../shared/user/user.entity';
+import config from '../../../../configs/app.config';
 import ApiError from '../../../../libs/errors/api.error';
 import { AuthUtils } from '../../../../libs/helpers/hash.helper';
 import { jwtHelpers } from '../../../../libs/helpers/jwt.helper';
+import { User } from '../../../../shared/user/user.entity';
+import { IUser } from '../../../../shared/user/user.model';
 
 
 const signUp = async (payload: IUser) => {

@@ -1,4 +1,5 @@
-import jwt, { JwtPayload, Secret } from 'jsonwebtoken';
+import * as jwt from 'jsonwebtoken';
+import { JwtPayload, Secret } from 'jsonwebtoken';
 
 const generateToken = (
   payload: Record<string, unknown>,

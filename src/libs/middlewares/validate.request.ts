@@ -17,4 +17,4 @@ const validator =
     }
   };
 
-export default validate;
+export default validator;

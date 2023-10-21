@@ -1,5 +1,5 @@
-import { ENUM_USER_ROLE } from '@/libs/shared/user.role.interface';
 import { Schema, model } from 'mongoose';
+import { ENUM_USER_ROLE } from '../../libs/shared/user.role.interface';
 import { IUser } from './user.model';
 
 const userSchema = new Schema<IUser>(

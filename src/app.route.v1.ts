@@ -1,7 +1,7 @@
-import express from 'express';
-import { AuthRoutes } from '@/auth/auth.route';
+import express, { Router } from 'express';
+import AuthRoutes from './modules/auth/auth.route';
 
-const router = express.Router();
+const router: Router = express.Router();
 
 const moduleRoutes = [
   {
